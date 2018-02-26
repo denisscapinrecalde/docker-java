@@ -16,10 +16,8 @@ pipeline {
         	steps {
 	        	sh 'echo teste'
 	        	dir('../docker-test')
+	        	pwd()
 		    }
-        	agent { 
-			    	dockerfile true 
-			}
         }
     }
 }
