@@ -12,8 +12,10 @@ pipeline {
             }
         }
         stage('Docker'){
-        	agent { 
-		    	dockerfile true 
+        	steps {
+	        	agent { 
+			    	dockerfile true 
+			    }
 		    }
         }
     }
