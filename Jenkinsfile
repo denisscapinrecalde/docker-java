@@ -1,7 +1,7 @@
 node {
    
    stage('Preparation') { 
-   	  sh("git clone -o origin git://github.com/denisscapinrecalde/docker-java.git")
+   	  checkout scm
    }
    stage('Build') {
    	dir('docker-java'){
