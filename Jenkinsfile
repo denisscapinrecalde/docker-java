@@ -11,14 +11,15 @@ pipeline {
                 sh 'sudo chmod +x *'
 				sh './mvnw package'
             }
+            stage('Docker'){
+	        	agent { 
+				    	dockerfile true 
+				}
+	        	steps {
+		        	sh 'echo teste'
+			    }
+	        }
         }
-        stage('Docker'){
-        	agent { 
-			    	dockerfile true 
-			}
-        	steps {
-	        	sh 'echo teste'
-		    }
-        }
+        
     }
 }
