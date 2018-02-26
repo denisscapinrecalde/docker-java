@@ -3,5 +3,5 @@ VOLUME /tmp
 
 ARG JAR_NAME
 
-ADD target/${JAR_NAME} app.jar
+ADD ${JAR_NAME} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
