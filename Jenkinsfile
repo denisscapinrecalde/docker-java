@@ -1,4 +1,5 @@
 pipeline {
+	checkout scm
 	agent {
 		dockerfile {
 			filename 'Dockerfile'
@@ -8,11 +9,6 @@ pipeline {
 		}
 	}
 	stages{
-		stage('Preparation') { 
-			steps {
-				checkout scm
-			}
-		}
 		stage('Build') {
 			steps {
 				sh("sudo chmod +x *")
