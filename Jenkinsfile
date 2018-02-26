@@ -1,7 +1,4 @@
 pipeline {
-    agent { 
-    	dockerfile true 
-    }
     stages {
     	stage('Checkout') {
 			steps {
@@ -13,6 +10,11 @@ pipeline {
                 sh 'sudo chmod +x *'
 				sh './mvnw package'
             }
+        }
+        stage('Docker'){
+        	agent { 
+		    	dockerfile true 
+		    }
         }
     }
 }
