@@ -1,5 +1,4 @@
 node {
-   agent { dockerfile true }
    stage('Preparation') { 
    	  checkout scm
    }
