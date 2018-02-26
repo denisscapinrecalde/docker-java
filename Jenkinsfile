@@ -12,10 +12,11 @@ pipeline {
             }
         }
         stage('Docker'){
-        	steps {
-	        	agent { 
+        	agent { 
 			    	dockerfile true 
-			    }
+			}
+        	steps {
+	        	sh 'echo teste'
 		    }
         }
     }
