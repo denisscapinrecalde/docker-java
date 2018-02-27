@@ -15,7 +15,8 @@ node {
 	        customImage.push('latest')
     	}
     }
-    stage("Dev Swarm")  {
+    stage("Deploy Swarm Dev")  {
     	input 'Deploy to Docker Swarm?'
+    	slackSend color: 'good', message: 'Message from Jenkins Pipeline'
     }
 }
