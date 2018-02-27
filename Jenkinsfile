@@ -16,7 +16,7 @@ node {
     stage("Deploy Swarm Dev")  {
     	echo 'Dev'
     	docker.withServer{
-	        docker.image('localhost:5000/gs-spring-boot-docker:1.0.0').withRun('-p 8081:8080') {
+	        docker.image('localhost:5000/gs-spring-boot-docker:1.0.0').withRun('-p 8081:8080') {c ->
 	            echo 'Deploy'
 	        }	
 	    }
