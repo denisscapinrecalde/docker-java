@@ -2,7 +2,7 @@ node {
 	stage("Checkout") {
 		checkout scm
 	}
-	stage("Build App) {
+	stage("Build App") {
     	sh 'sudo chmod +x *'
 		sh './mvnw package'
 	}
